@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2480674",
+      "name": "系统管理",
+      "font_class": "xitongguanli",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
+      "icon_id": "7335566",
+      "name": "生产管理",
+      "font_class": "shengchanguanli",
+      "unicode": "eb37",
+      "unicode_decimal": 60215
+    },
+    {
+      "icon_id": "12328575",
+      "name": "过载",
+      "font_class": "guozai",
+      "unicode": "ea37",
+      "unicode_decimal": 59959
+    },
+    {
+      "icon_id": "34263651",
+      "name": "运行监控",
+      "font_class": "yunhangjiankong",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    }
+  ]
+}
