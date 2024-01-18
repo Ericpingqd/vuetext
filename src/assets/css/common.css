@@ -1,0 +1,32 @@
+.ivu-layout-header {
+    background: #71c4ef;
+}
+
+.ivu-menu-dark {
+    background: #71c4ef;
+}
+
+.ivu-layout {
+    background: #71c4ef;
+}
+
+element.style {
+    width: 200px;
+    background: #71c4ef;
+}
+
+.ivu-menu-vertical .ivu-menu-item,
+.ivu-menu-vertical .ivu-menu-submenu-title {
+    padding: 40px 40px;
+}
+
+.ivu-layout-sider-children {
+    padding-top: 0px;
+}
+
+.ivu-menu.ivu-menu-light.ivu-menu-vertical {
+    width: 200px !important;
+}
+.ivu-breadcrumb{
+    margin: -6px 0px !important;
+}

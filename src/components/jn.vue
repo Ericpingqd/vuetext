@@ -1,147 +1,64 @@
 <template>
-  <div class="card">
-  <div class="title">
-    <p class="heading">节能减排</p>
+    <div>
+    <ul class="jieneng">
+    <li>
+    <i class="iconfont" style="color: rgb(205,144 , 133); float: left;"></i>
+    <p class="p">二氧化碳</p>
+    <p class="p2">万吨</p>
+    <span class="jn-number">8.45</span>
+    </li>
+    <li>
+    <i class="iconfont" style="color: rgb(32,187 , 221); float: left; font-size: 28px;"></i>
+    <p class="p">汽车里程</p>
+    <p class="p2">KM</p>
+    <span class="jn-number">7.37</span>
+    </li>
+    <li>
+    <i class="iconfont" style="color: rgb(13,188 , 121); float: left; font-size: 28px;"></i>
+    <p class="p">等效植树</p>
+    <p class="p2">万颗</p>
+    <span class="jn-number">461.79</span>
+    </li>
+    <li>
+    <i class="iconfont" style="color: rgb(242,238 , 127); float: left; font-size: 28px;"></i>
+    <p class="p">二氧化硫</p>
+    <p class="p2">吨</p>
+    <span class="jn-number">2542.91</span>
+    </li>
+    </ul>
+    </div>
+    </template>
     
-  </div>
-  <div class="wrapper">
-    <div class="color black">
-      二氧化碳
-      <span class="hex">8.45万吨</span>
-    </div>
-    <div class="color eerie-black">
-      汽车里程
-      <span class="hex">7.37km</span>
-    </div>
-    <div class="color chinese-black">
-      等效植树
-      <span class="hex">431.79万棵</span>
-    </div>
-     <div class="color night-rider">
-      二氧化硫
-      <span class="hex">2542.91吨</span>
-    </div>
-   
-  
-  </div>
-</div>
-</template>
-
-<script>
-export default {
-  setup () {
+    <script>
+    export default {
     
-
-    return {}
-  }
-}
-</script>
-
-<style>
-.card {
-  width: 500px;
-  height: 400px;
-  --black: #000000;
-  --ch-black: #141414;
-  --eer-black: #1b1b1b;
-  --night-rider: #2e2e2e;
-  --white: #ffffff;
-  --af-white: #f3f3f3;
-  --ch-white: #e1e1e1;
-  font-family: Helvetica, sans-serif;
-}
-
-.wrapper {
-  margin: 2rem auto;
- 
-  font-size: small;
-}
-
-.title {
-  text-align: center;
-  color: #1b1b1b;
-}
-
-.heading {
-  font-weight: bold;
-  letter-spacing: 7px;
-  font-size: 1.5rem;
-  position: relative;
-  margin-bottom: 6px;
-}
-
-.heading::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: #e8e8e8;
-  z-index: -1;
-  filter: blur(50px);
-  height: 50px;
-}
-
-.color {
-  padding: 10px 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.hex {
-  text-align: end;
-  font-family: monospace;
-  text-transform: uppercase;
-}
-
-.black {
-  background: var(--black);
-  color: var(--ch-white);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
-.eerie-black {
-  background: var(--ch-black);
-  color: var(--ch-white);
-}
-
-.chinese-black {
-  background: var(--eer-black);
-  color: var(--ch-white);
-}
-
-.night-rider {
-  background: var(--night-rider);
-  color: var(--ch-white);
-}
-
-.chinese-white {
-  background: var(--ch-white);
-  color: var(--night-rider);
-}
-
-.anti-flash-white {
-  background: var(--af-white);
-  color: var(--night-rider);
-}
-
-.white {
-  background: var(--white);
-  color: var(--night-rider);
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.border {
-  color: var(--night-rider);
-  padding: 10px 10px;
-  text-align: center;
-}
-
-.border span {
-  border-radius: 5px;
-  color: var(--ch-white);
-  padding: 2px 4px;
-  background-color: var(--night-rider);
-}
-</style>
+    }
+    </script>
+    
+    <style>
+    .jieneng li {
+    width: 100%;
+    height: 34px;
+    list-style: none;
+    line-height: 20px;
+    margin-top: 35px;
+    }
+    
+    .p {
+    color: rgb(105, 104, 144);
+    float: left;
+    margin-left: 15px;
+    }
+    
+    .jn-number {
+    color: black;
+    font-size: 18px;
+    float: right;
+    }
+    
+    .p2 {
+    color: black;
+    float: right;
+    margin-left: 10px;
+    }
+    </style>

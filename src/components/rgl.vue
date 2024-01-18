@@ -1,18 +1,14 @@
 <template>
   <div>
-
-    <div ref="chart" style="height: 400px; width: 460px;">
-    </div>
+    <div ref="chart" style="height: 400px; width: 800px;"></div>
   </div>
 </template>
+
 <script>
-// import Vue from 'vue'
-       
 import * as echarts from 'echarts'
 
 export default {
   mounted() {
-    // 在组件挂载后，初始化Echart图表
     this.initChart()
   },
   methods: {
@@ -20,20 +16,10 @@ export default {
       return percentage === 100 ? '满' : `${percentage}%`;
     },
     initChart() {
-      // 使用Echart创建一个图表实例
       const chart = echarts.init(this.$refs.chart)
 
-
-      // 模拟一些数据
-      // const data = [220, 302, 181, 234, 210, 290, 150]
-
-      // 配置Echart的选项
       const options = {
-
-        color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
-        title: {
-          text: ''
-        },
+        color: ['#12739B', '#7C23A8'],
         tooltip: {
           trigger: 'axis',
           axisPointer: {
@@ -43,30 +29,22 @@ export default {
             }
           }
         },
-        legend: {
-          data: ['Line 1', 'Line 2', 'Line 3', 'Line 4', 'Line 5']
-        },
-        toolbox: {
-          feature: {
-            saveAsImage: {}
-          }
-        },
         grid: {
           left: '3%',
           right: '4%',
-          bottom: '3%',
+          bottom: '10%',
           containLabel: true
         },
         xAxis: [
           {
             type: 'category',
             boundaryGap: false,
-            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            data: ['0', '3', '6', '9', '12', '15', '18', '21']
           }
         ],
         yAxis: [
           {
-            type: 'value'
+            type: 'value',
           }
         ],
         series: [
@@ -84,102 +62,21 @@ export default {
               color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
                 {
                   offset: 0,
-                  color: 'rgb(128, 255, 165)'
+                  color: 'rgb(9, 184, 202)'
                 },
                 {
                   offset: 1,
-                  color: 'rgb(1, 191, 236)'
+                  color: 'rgb(37, 37, 107)'
                 }
               ])
             },
             emphasis: {
               focus: 'series'
             },
-            data: [140, 232, 101, 264, 90, 340, 250]
+            data: [700, 1100, 900, 2000, 1000, 1700, 700, 800]
           },
           {
             name: 'Line 2',
-            type: 'line',
-            stack: 'Total',
-            smooth: true,
-            lineStyle: {
-              width: 0
-            },
-            showSymbol: false,
-            areaStyle: {
-              opacity: 0.8,
-              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                {
-                  offset: 0,
-                  color: 'rgb(0, 221, 255)'
-                },
-                {
-                  offset: 1,
-                  color: 'rgb(77, 119, 255)'
-                }
-              ])
-            },
-            emphasis: {
-              focus: 'series'
-            },
-            data: [120, 282, 111, 234, 220, 340, 310]
-          },
-          {
-            name: 'Line 3',
-            type: 'line',
-            stack: 'Total',
-            smooth: true,
-            lineStyle: {
-              width: 0
-            },
-            showSymbol: false,
-            areaStyle: {
-              opacity: 0.8,
-              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                {
-                  offset: 0,
-                  color: 'rgb(55, 162, 255)'
-                },
-                {
-                  offset: 1,
-                  color: 'rgb(116, 21, 219)'
-                }
-              ])
-            },
-            emphasis: {
-              focus: 'series'
-            },
-            data: [320, 132, 201, 334, 190, 130, 220]
-          },
-          {
-            name: 'Line 4',
-            type: 'line',
-            stack: 'Total',
-            smooth: true,
-            lineStyle: {
-              width: 0
-            },
-            showSymbol: false,
-            areaStyle: {
-              opacity: 0.8,
-              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                {
-                  offset: 0,
-                  color: 'rgb(255, 0, 135)'
-                },
-                {
-                  offset: 1,
-                  color: 'rgb(135, 0, 157)'
-                }
-              ])
-            },
-            emphasis: {
-              focus: 'series'
-            },
-            data: [220, 402, 231, 134, 190, 230, 120]
-          },
-          {
-            name: 'Line 5',
             type: 'line',
             stack: 'Total',
             smooth: true,
@@ -196,49 +93,28 @@ export default {
               color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
                 {
                   offset: 0,
-                  color: 'rgb(255, 191, 0)'
+                  color: 'rgb(182, 42, 219)'
                 },
                 {
                   offset: 1,
-                  color: 'rgb(224, 62, 76)'
+                  color: 'rgb(79, 31, 130)'
                 }
               ])
             },
             emphasis: {
               focus: 'series'
             },
-            data: [220, 302, 181, 234, 210, 290, 150]
+            data: [700, 750, 1400, 1600, 1100, 2000, 1000, 600]
           }
         ],
-
       }
 
-
-      // 使用配置项渲染图表
       chart.setOption(options)
     }
   }
 }
-
 </script>
-  
-<style lang="scss" scoped>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-.title-wrapper {
-  position: relative;
-}
 
-.title-wrapper h2 {
-  position: relative;
-  z-index: 2;
-}
+<style>
 
 </style>
-  
